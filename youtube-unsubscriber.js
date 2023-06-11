@@ -8,11 +8,13 @@ function myTimer() {
 
     if (i < els.length) {
 
-        els[i].querySelector("[aria-label^='Unsubscribe from']").click();
+        unsubBtn =  els[i].querySelector("[aria-label^='Unsubscribe from']")
+        unsubBtn.click();
 
         setTimeout(function () {
 
-            var unSubBtn = document.getElementById("confirm-button").click();
+            var confirmBtn = unsubBtn.querySelector("button");
+            confirmBtn.click();
 
         }, 2000);
 
